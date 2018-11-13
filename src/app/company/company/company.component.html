@@ -1,0 +1,43 @@
+<body>
+      
+      <div class="sidenav">
+          <img src="assets/logo_white_blue.svg" class="frank-logo">
+        <a href="/hiring">Start Hiring</a>
+        <a href="/talent">i'm talent</a>
+        <a href="/company">For company</a>
+        <a href="/work">How it works</a>
+        <a href="/pricing">pricing</a>
+        <a href="/contact">Contact</a>
+
+        <footer><form id="text-me-app"><span style="color: wheat;">Text me a link to the app:</span><br>
+          <input type="text" placeholder="+3725555555" value="">
+          <button type="submit" class="btn btn-primary" >Send</button>
+        
+        </form></footer>
+      </div>
+     
+
+      <div class="main">
+          <h1>ChatBot</h1>
+
+          <ng-container *ngFor="let message of messages | async">
+          
+            <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                              'to':   message.sentBy === 'user' }">
+              {{ message.content }}
+            </div>
+          
+          </ng-container>
+          
+          
+          <label for="nameField">Your Message</label>
+          
+          
+          <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+          
+          <button (click)="sendMessage()">Send</button>
+      </div>
+      
+      </body>
+      
+      

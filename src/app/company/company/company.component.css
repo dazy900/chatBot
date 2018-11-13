@@ -1,0 +1,68 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+.sidenav a {
+   
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    width:60%;
+    
+}
+img {
+    margin-top: 8rem;
+    max-width: 100%;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+ 
+}
+
+.main {
+    margin-top: 5rem;
+     margin-left: 400px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+#footer {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+     }
+     input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], input[type='color'], input[type='date'], input[type='month'], input[type='week'], input[type='datetime'], input[type='datetime-local'], input:not([type]), textarea, select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: 0.1rem solid #d1d1d1;
+        border-radius: .4rem;
+        box-shadow: none;
+        box-sizing: inherit;
+        height: 3.8rem;
+        padding: .6rem 1.0rem;
+        width: 60%;
+    }

@@ -1,0 +1,30 @@
+
+
+<nav class="navbar navbar-dark bg-dark">
+   <div class="container-fluid">
+        <a class="navbar-brand" href="#">Login with Auth0</a>
+        <form class="form-inline">
+          <button class="btn btn-primary my-2 my-sm-0 mr-2"
+            routerLink="#home" type="button">
+              Home
+          </button>
+  
+          <button id="qsLoginBtn"
+            class="btn btn-primary my-2 my-sm-0"
+            *ngIf="!auth.isAuthenticated()"
+            (click)="auth.login()" type="button">
+              Log In
+          </button>
+  
+          <button id="qsLogoutBtn"
+            class="btn btn-primary my-2 my-sm-0"
+            *ngIf="auth.isAuthenticated()"
+            (click)="auth.logout()" type="button">
+              Log Out
+          </button>
+  
+        </form>
+        <img src="assets/chatbot.jpg" class="frank">
+    </div>
+  </nav> 
+  
